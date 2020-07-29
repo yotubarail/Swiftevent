@@ -13,14 +13,14 @@ struct ContentView: View {
         TabView {
             connpassListView().tabItem {
                 VStack {
-                    Image(systemName: "airplane")
+                    Image(systemName: "magnifyingglass")
                     Text("検索結果")
                 }
             }.tag(1)
             
             MyListView().tabItem {
                 VStack {
-                    Image(systemName: "mappin")
+                    Image(systemName: "person")
                     Text("参加イベント")
                 }
             }.tag(2)
