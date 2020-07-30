@@ -26,6 +26,7 @@
 		5D69FA5A24D13B9C005C16C7 /* MyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5924D13B9C005C16C7 /* MyGroup.swift */; };
 		5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */; };
 		5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5D24D13D83005C16C7 /* MyWebView.swift */; };
+		5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5D69FA5924D13B9C005C16C7 /* MyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroup.swift; sourceTree = "<group>"; };
 		5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupEventFetcher.swift; sourceTree = "<group>"; };
 		5D69FA5D24D13D83005C16C7 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				5D69FA5524D13A99005C16C7 /* MyRowView.swift */,
 				5D69FA5324D13A81005C16C7 /* MyListView.swift */,
 				5D69FA5D24D13D83005C16C7 /* MyWebView.swift */,
+				5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */,
 				5D69FA5224D11CE1005C16C7 /* FormyList */,
 			);
 			path = myList;
@@ -222,6 +225,7 @@
 				5D69FA4324D0F9DC005C16C7 /* connpassListView.swift in Sources */,
 				5D69FA5024D116C9005C16C7 /* ContentView.swift in Sources */,
 				5D69FA4624D0FA66005C16C7 /* connpassWebView.swift in Sources */,
+				5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */,
 				5D69FA3124D0F8DB005C16C7 /* Swiftevent.xcdatamodeld in Sources */,
 				5D69FA5424D13A81005C16C7 /* MyListView.swift in Sources */,
 				5D69FA4E24D0FBCA005C16C7 /* groupEventFetcher.swift in Sources */,

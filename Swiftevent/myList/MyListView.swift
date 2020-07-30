@@ -30,6 +30,10 @@ struct MyListView: View {
                     }
                 }
             .navigationBarTitle("参加イベント")
+                .navigationBarItems(trailing: NavigationLink(destination: MyMenuView(), label: {
+                    Text("設定")
+                        .font(.system(size: 20))
+                }))
             }
         }
 }

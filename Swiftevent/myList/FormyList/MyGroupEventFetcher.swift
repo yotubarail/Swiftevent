@@ -10,7 +10,7 @@ import Foundation
 
 class myGroupEventFetcher: ObservableObject {
 
-    private let urlLink = "https://connpass.com/api/v1/event/?nickname=ShotaTakinami&order=2&count=25"
+    @Published private var urlLink = "https://connpass.com/api/v1/event/?nickname=\(UserDefaults.standard.string(forKey: "userName") ?? "")&order=2"
     
     @Published var eventData: [myEvent] = []
 
