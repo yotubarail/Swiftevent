@@ -23,7 +23,7 @@ struct connpassRowView: View {
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
                         .foregroundColor(Color.red)
-                    Text(eventData.place)
+                    Text(eventData.place ?? "未定")
                     .font(.system(size: 15))
                 }
             }

@@ -12,7 +12,7 @@ struct myEvent: Decodable,Identifiable {
     var id: Int
     var title: String
     var date: String
-    var place: String
+    var place: String!
     var people: Int
     var limit: Int!
     var url: String
