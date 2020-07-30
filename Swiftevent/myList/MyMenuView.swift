@@ -18,35 +18,34 @@ struct MyMenuView: View {
             .onTapGesture {
                 UIApplication.shared.closeKeyboard()
             }
-
             VStack{
+                Spacer()
                 TextField("ユーザー名を入力", text: $addUserName)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 250)
                     .padding(50)
-                HStack {
-                    Button(action: removeUserDefaults, label:  {
-                        Text("ログアウト")
-                            .foregroundColor(Color.white)
-                            .frame(width: 150, height: 50)
-                            .background(Color.red)
-                            .padding(.vertical, 50)
-                    })
-                    Button(action: inUserDefaults, label: {
-                        Text("ログイン")
-                            .foregroundColor(Color.white)
-                            .frame(width: 150, height: 50)
-                            .background(Color.blue)
-                            .padding(.vertical, 50)
-                    })
-                }
+                Button(action: inUserDefaults, label: {
+                    Text("ログイン")
+                        .foregroundColor(Color.white)
+                        .frame(width: 150, height: 50)
+                        .background(Color.blue)
+                        .padding(.vertical, 50)
+                })
+                Button(action: removeUserDefaults, label:  {
+                    Text("ログアウト")
+                        .foregroundColor(Color.white)
+                        .frame(width: 150, height: 50)
+                        .background(Color.red)
+                        .padding(.vertical, 50)
+                })
+                Spacer()
             }
         }
     }
     
     func inUserDefaults() {
         UserDefaults.standard.set(addUserName, forKey: "userName")
-        
     }
     
     func removeUserDefaults() {

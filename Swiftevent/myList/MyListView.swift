@@ -10,32 +10,40 @@ import SwiftUI
 
 struct MyListView: View {
     @State var showModal = false
+    @State var setting = false
         
-    //    let events: [Event] = mockMyEventsData
-         @ObservedObject var fetcher = myGroupEventFetcher()
+    @ObservedObject var fetcher = MyGroupEventFetcher()
         
-        var body: some View {
-            NavigationView {
-                List(fetcher.eventData) { event in
-                //            NavigationLink(destination: MyWebView(eventData: event)){
-                //                connpassRowView(eventData: event)
-                //            }
-                    Button(action: {
-                        self.showModal.toggle()
-                    }) {
-                        MyRowView(eventData: event)
-                    }
-                    .sheet(isPresented: self.$showModal) {
-                            MyWebView(eventData: event)
-                    }
+    var body: some View {
+        NavigationView {
+            List(fetcher.eventData) { event in
+                Button(action: {
+                    self.showModal.toggle()
+                }) {
+                    MyRowView(eventData: event)
                 }
-            .navigationBarTitle("参加イベント")
-                .navigationBarItems(trailing: NavigationLink(destination: MyMenuView(), label: {
+                .sheet(isPresented: self.$showModal) {
+                        MyWebView(eventData: event)
+                }
+            }
+        .navigationBarTitle("参加イベント")
+            .navigationBarItems(trailing:
+//                   NavigationLink(destination: MyMenuView(), label: {
+//                   Text("設定")
+//                       .font(.system(size: 20))
+//               })
+                Button(action: {
+                    self.setting.toggle()
+                }) {
                     Text("設定")
                         .font(.system(size: 20))
-                }))
-            }
+                }
+                .sheet(isPresented: self.$setting) {
+                        MyMenuView()
+                }
+            )
         }
+    }
 }
 
 struct MyListView_Previews: PreviewProvider {
