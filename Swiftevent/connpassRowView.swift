@@ -51,7 +51,7 @@ final class EventDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.locale = Locale(identifier: "ja_JP")
-        formatter.setLocalizedDateFormatFromTemplate("Mdk")
+        formatter.setLocalizedDateFormatFromTemplate("MdkHm")
         return formatter.string(from: date)
     }
 }

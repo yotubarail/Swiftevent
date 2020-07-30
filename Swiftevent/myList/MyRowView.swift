@@ -29,7 +29,7 @@ struct MyRowView: View {
                 }
             }
             Spacer()
-            Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
+            Text(myEventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
         }
     }
 }
@@ -45,7 +45,7 @@ final class myEventDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.locale = Locale(identifier: "ja_JP")
-        formatter.setLocalizedDateFormatFromTemplate("Mdk")
+        formatter.setLocalizedDateFormatFromTemplate("MdkHm")
         return formatter.string(from: date)
     }
 }
