@@ -10,37 +10,43 @@ import SwiftUI
 
 struct MyMenuView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     @State var addUserName = UserDefaults.standard.string(forKey: "userName") ?? ""
     
     var body: some View {
-        ZStack {
-            Color.white
-            .onTapGesture {
-                UIApplication.shared.closeKeyboard()
+        NavigationView {
+            ZStack {
+                Color.white
+                .onTapGesture {
+                    UIApplication.shared.closeKeyboard()
+                }
+                VStack{
+                    Spacer()
+                    TextField("ユーザー名を入力", text: $addUserName)
+                        .autocapitalization(.none)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: 250)
+                        .padding(50)
+                    Button(action: inUserDefaults, label: {
+                        Text("ログイン")
+                            .foregroundColor(Color.white)
+                            .frame(width: 150, height: 50)
+                            .background(Color.blue)
+                            .padding(.vertical, 25)
+                    })
+                    Button(action: removeUserDefaults, label:  {
+                        Text("ログアウト")
+                            .foregroundColor(Color.white)
+                            .frame(width: 150, height: 50)
+                            .background(Color.red)
+                            .padding(.vertical, 25)
+                    })
+                    Spacer()
+                }
             }
-            VStack{
-                Spacer()
-                TextField("ユーザー名を入力", text: $addUserName)
-                    .autocapitalization(.none)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 250)
-                    .padding(50)
-                Button(action: inUserDefaults, label: {
-                    Text("ログイン")
-                        .foregroundColor(Color.white)
-                        .frame(width: 150, height: 50)
-                        .background(Color.blue)
-                        .padding(.vertical, 50)
-                })
-                Button(action: removeUserDefaults, label:  {
-                    Text("ログアウト")
-                        .foregroundColor(Color.white)
-                        .frame(width: 150, height: 50)
-                        .background(Color.red)
-                        .padding(.vertical, 50)
-                })
-                Spacer()
-            }
+        .navigationBarItems(trailing: Button("完了") {
+            self.presentationMode.wrappedValue.dismiss()
+        })
         }
     }
     
