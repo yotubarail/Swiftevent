@@ -20,24 +20,26 @@ struct MyRowView: View {
             VStack(alignment: .leading) {
                 Text(eventData.title)
                     .font(.system(size: 20))
+                    .foregroundColor(Color.black)
                     .padding(.bottom,20)
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
                         .foregroundColor(Color.red)
                     Text(eventData.place ?? "未定")
                     .font(.system(size: 15))
+                    .foregroundColor(Color.black)
                 }
             }
             Spacer()
-            VStack(alignment: .trailing) {
-                Spacer()
-                Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
-                Spacer()
-                Text("参加:" + String(eventData.people) + "人")
-                Text("定員:" + String((eventData.limit ?? 0)) + "人")
-                Spacer()
-            }
+            Text(myEventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
+                .foregroundColor(Color.black)
         }
+        .padding(.horizontal, 10)
+        .background(myRowBackgroundView())
+        .padding(.vertical, 10)
+        .compositingGroup()
+        .shadow(radius: 5)
+        .background(Color.white)
     }
 }
 
@@ -52,7 +54,7 @@ final class myEventDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.locale = Locale(identifier: "ja_JP")
-        formatter.setLocalizedDateFormatFromTemplate("Mdk")
+        formatter.setLocalizedDateFormatFromTemplate("MdkHm")
         return formatter.string(from: date)
     }
 }

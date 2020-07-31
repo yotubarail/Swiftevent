@@ -17,18 +17,18 @@ struct connpassListView: View {
     
     var body: some View {
         NavigationView {
-            List(fetcher.eventData) { event in
-            //            NavigationLink(destination: connpassWebView(eventData: event)){
-            //                connpassRowView(eventData: event)
-            //            }
-                Button(action: {
-                    self.showModal.toggle()
-                }) {
-                    connpassRowView(eventData: event)
-                }
-                .sheet(isPresented: self.$showModal) {
-                        connpassWebView(eventData: event)
-                }
+            List {
+               ForEach(fetcher.eventData)  { event in
+                    Button(action: {
+                            self.showModal.toggle()
+                    }) {
+                            connpassRowView(eventData: event)
+                        }
+                        .sheet(isPresented: self.$showModal) {
+                                connpassWebView(eventData: event)
+                        }
+                    }
+                .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("connpass検索結果")
         }
