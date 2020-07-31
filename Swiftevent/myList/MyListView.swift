@@ -39,7 +39,7 @@ struct MyListView: View {
                     self.setting.toggle()
                 }) {
                     Text("設定")
-                        .font(.system(size: 20))
+                        .font(.system(size: 22))
                 }
                 .sheet(isPresented: self.$setting) {
                         MyMenuView()

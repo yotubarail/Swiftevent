@@ -14,6 +14,9 @@ struct ContentView: View {
             connpassListView().tabItem {
                 VStack {
                     Image(systemName: "magnifyingglass")
+                        .font(.system(size: 22.0))
+                        .frame(minWidth: 44.0, maxWidth: .infinity,
+                    minHeight: 44.0, alignment: .center)
                     Text("検索結果")
                 }
             }.tag(1)
@@ -21,6 +24,7 @@ struct ContentView: View {
             MyListView().tabItem {
                 VStack {
                     Image(systemName: "person")
+                    .font(.system(size: 22.0))
                     Text("参加イベント")
                 }
             }.tag(2)
