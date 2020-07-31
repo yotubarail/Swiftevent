@@ -16,15 +16,18 @@ struct MyListView: View {
         
     var body: some View {
         NavigationView {
-            List(fetcher.eventData) { event in
-                Button(action: {
-                    self.showModal.toggle()
-                }) {
-                    MyRowView(eventData: event)
-                }
-                .sheet(isPresented: self.$showModal) {
-                        MyWebView(eventData: event)
-                }
+            List {
+               ForEach(fetcher.eventData)  { event in
+                    Button(action: {
+                            self.showModal.toggle()
+                    }) {
+                            MyRowView(eventData: event)
+                        }
+                        .sheet(isPresented: self.$showModal) {
+                                MyWebView(eventData: event)
+                        }
+                    }
+                .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("参加イベント")
             .navigationBarItems(trailing:
