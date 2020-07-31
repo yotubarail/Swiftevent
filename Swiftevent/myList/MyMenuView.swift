@@ -44,9 +44,10 @@ struct MyMenuView: View {
                     Spacer()
                 }
             }
-        .navigationBarItems(trailing: Button("完了") {
+        .navigationBarItems(leading: Button("完了") {
             self.presentationMode.wrappedValue.dismiss()
         })
+        .font(.system(size: 22))
         }
     }
     
