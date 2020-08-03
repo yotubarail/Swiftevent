@@ -67,6 +67,10 @@ extension UIApplication {
     }
 }
 
+class UseUserDefaults: ObservableObject {
+    @Published var userDefaults = UserDefaults.standard.string(forKey: "userName")
+}
+
 struct MyMenuView_Previews: PreviewProvider {
     static var previews: some View {
         MyMenuView()

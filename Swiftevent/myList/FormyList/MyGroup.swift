@@ -19,12 +19,16 @@ let mockMyEventsData: [myEvent]
          place: "東京都足立区",
          people: 15,
          limit: 100,
-         url: "https://st2121.web.fc2.com"),
+         url: "https://st2121.web.fc2.com",
+         lat: "0",
+         lon: "0"),
    myEvent(id: 2,
          title: "Swiftおべんつよかい",
          date: "6/24\n19:00",
          place: "静岡県静岡市清水区",
          people: 35,
          limit: 50,
-         url: "")
+         url: "",
+         lat: "0",
+         lon: "0")
 ]
