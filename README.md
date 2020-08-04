@@ -5,7 +5,7 @@ Swift UI中心に作っていくことを目標にしています。
 
 
 ## 参考リンク
-<a href="https://github.com/MilanistaDev/StudyGroupEventFetcherForSwiftUI">【SwiftUI】外部APIを叩いて取得した結果をListに表示する</a>  
+<a href="https://qiita.com/MilanistaDev/items/64dca8c9d5099a19529e">【SwiftUI】外部APIを叩いて取得した結果をListに表示する</a>  
 
 <a href="https://www.it-swarm.dev/ja/swift/複数のシート（ispresented-がswiftuiで機能しない/813529631/">複数のシート（isPresented :)がSwiftUIで機能しない</a>  
 
