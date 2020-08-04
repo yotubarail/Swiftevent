@@ -8,11 +8,15 @@
 
 import SwiftUI
 
+enum ActiveSheet {
+   case first, second
+}
+
 struct MyListView: View {
-    @State var showModal1 = false
-    @State var showModal2 = false
-    @State var setting = false
+    @State var showModal = false
     @State var showActionSheet = false
+    @State private var activeSheet: ActiveSheet = .first
+    @State var setting = false
         
     @ObservedObject var fetcher = MyGroupEventFetcher()
         
@@ -26,29 +30,32 @@ struct MyListView: View {
                             MyRowView(eventData: event)
                         }
                 .actionSheet(isPresented: self.$showActionSheet, content: {
-                        ActionSheet(title: Text("Action"),
-                            message: Text("Description"),
+                        ActionSheet(title: Text("メニュー"),
+                            message: Text("選択してください"),
                             buttons: [
                                 .default(Text("詳細"), action: {
-                                    self.showModal1.toggle()
-                                    print("タップs")
+                                    self.showModal = true
+                                    self.activeSheet = .first
                                 }),
                                 .default(Text("地図"), action: {
-                                    self.showModal2.toggle()
+                                    self.showModal = true
+                                     self.activeSheet = .second
                                 }),
                                 .cancel()
                             ]
                         )
                     }
                 )
-                .sheet(isPresented: self.$showModal1) {
-                    MyWebView(eventData: event)
-                }
-                .sheet(isPresented: self.$showModal2) {
-                    MyMapView(eventData: event)
+                .sheet(isPresented: self.$showModal) {
+                    if self.activeSheet == .first {
+                        MyWebView(eventData: event)
+                    }
+                    else {
+                        MyMapView(eventData: event)
+                    }
                 }
                }
-                .listRowInsets(EdgeInsets())
+            .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("参加イベント")
             .navigationBarItems(trailing:
