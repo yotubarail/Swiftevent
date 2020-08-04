@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct MyListView: View {
-    @State var showModal = false
+    @State var showModal1 = false
+    @State var showModal2 = false
     @State var setting = false
+    @State var showActionSheet = false
         
     @ObservedObject var fetcher = MyGroupEventFetcher()
         
@@ -19,14 +21,33 @@ struct MyListView: View {
             List {
                ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
                     Button(action: {
-                            self.showModal.toggle()
+                            self.showActionSheet.toggle()
                     }) {
                             MyRowView(eventData: event)
                         }
-                        .sheet(isPresented: self.$showModal) {
-                                MyWebView(eventData: event)
-                        }
+                .actionSheet(isPresented: self.$showActionSheet, content: {
+                        ActionSheet(title: Text("Action"),
+                            message: Text("Description"),
+                            buttons: [
+                                .default(Text("詳細"), action: {
+                                    self.showModal1.toggle()
+                                    print("タップs")
+                                }),
+                                .default(Text("地図"), action: {
+                                    self.showModal2.toggle()
+                                }),
+                                .cancel()
+                            ]
+                        )
                     }
+                )
+                .sheet(isPresented: self.$showModal1) {
+                    MyWebView(eventData: event)
+                }
+                .sheet(isPresented: self.$showModal2) {
+                    MyMapView(eventData: event)
+                }
+               }
                 .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("参加イベント")
