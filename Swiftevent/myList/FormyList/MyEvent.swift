@@ -16,8 +16,8 @@ struct myEvent: Decodable,Identifiable {
     var people: Int
     var limit: Int!
     var url: String
-    var lat: String!
-    var lon: String!
+    var lat: String?
+    var lon: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "event_id"

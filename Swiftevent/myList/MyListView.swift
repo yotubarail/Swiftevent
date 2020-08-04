@@ -8,8 +8,14 @@
 
 import SwiftUI
 
+enum ActiveSheet {
+   case first, second
+}
+
 struct MyListView: View {
     @State var showModal = false
+    @State var showActionSheet = false
+    @State private var activeSheet: ActiveSheet = .first
     @State var setting = false
         
     @ObservedObject var fetcher = MyGroupEventFetcher()
@@ -19,15 +25,37 @@ struct MyListView: View {
             List {
                ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
                     Button(action: {
-                            self.showModal.toggle()
+                            self.showActionSheet.toggle()
                     }) {
                             MyRowView(eventData: event)
                         }
-                        .sheet(isPresented: self.$showModal) {
-                                MyWebView(eventData: event)
-                        }
+                .actionSheet(isPresented: self.$showActionSheet, content: {
+                        ActionSheet(title: Text("メニュー"),
+                            message: Text("選択してください"),
+                            buttons: [
+                                .default(Text("詳細"), action: {
+                                    self.showModal = true
+                                    self.activeSheet = .first
+                                }),
+                                .default(Text("地図"), action: {
+                                    self.showModal = true
+                                     self.activeSheet = .second
+                                }),
+                                .cancel()
+                            ]
+                        )
                     }
-                .listRowInsets(EdgeInsets())
+                )
+                .sheet(isPresented: self.$showModal) {
+                    if self.activeSheet == .first {
+                        MyWebView(eventData: event)
+                    }
+                    else {
+                        MyMapView(eventData: event)
+                    }
+                }
+               }
+            .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("参加イベント")
             .navigationBarItems(trailing:

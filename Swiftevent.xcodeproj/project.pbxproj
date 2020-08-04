@@ -29,6 +29,7 @@
 		5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */; };
 		5D69FA6224D2B62C005C16C7 /* myRowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */; };
 		5D69FA6424D3A856005C16C7 /* connpassRowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6324D3A856005C16C7 /* connpassRowBackgroundView.swift */; };
+		5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6724D8E41A005C16C7 /* MyMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuView.swift; sourceTree = "<group>"; };
 		5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myRowBackgroundView.swift; sourceTree = "<group>"; };
 		5D69FA6324D3A856005C16C7 /* connpassRowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassRowBackgroundView.swift; sourceTree = "<group>"; };
+		5D69FA6724D8E41A005C16C7 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				5D69FA5524D13A99005C16C7 /* MyRowView.swift */,
 				5D69FA5324D13A81005C16C7 /* MyListView.swift */,
 				5D69FA5D24D13D83005C16C7 /* MyWebView.swift */,
+				5D69FA6724D8E41A005C16C7 /* MyMapView.swift */,
 				5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */,
 				5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */,
 				5D69FA5224D11CE1005C16C7 /* FormyList */,
@@ -235,6 +238,7 @@
 				5D69FA4624D0FA66005C16C7 /* connpassWebView.swift in Sources */,
 				5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */,
 				5D69FA3124D0F8DB005C16C7 /* Swiftevent.xcdatamodeld in Sources */,
+				5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */,
 				5D69FA5424D13A81005C16C7 /* MyListView.swift in Sources */,
 				5D69FA4E24D0FBCA005C16C7 /* groupEventFetcher.swift in Sources */,
 			);
