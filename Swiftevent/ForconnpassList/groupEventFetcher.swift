@@ -8,7 +8,7 @@
 
 import Foundation
 
-class groupEventFetcher: ObservableObject {
+class GroupEventFetcher: ObservableObject {
 
     private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=25"
     

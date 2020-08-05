@@ -13,6 +13,8 @@ struct MyMenuView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var addUserName = UserDefaults.standard.string(forKey: "userName") ?? ""
     
+    @ObservedObject var fether = MyGroupEventFetcher()
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -54,6 +56,7 @@ struct MyMenuView: View {
     
     func inUserDefaults() {
         UserDefaults.standard.set(addUserName, forKey: "userName")
+        fether.fetchEventData()
     }
     
     func removeUserDefaults() {
@@ -66,10 +69,6 @@ extension UIApplication {
     func closeKeyboard() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
-}
-
-class UseUserDefaults: ObservableObject {
-    @Published var userDefaults = UserDefaults.standard.string(forKey: "userName")
 }
 
 struct MyMenuView_Previews: PreviewProvider {
