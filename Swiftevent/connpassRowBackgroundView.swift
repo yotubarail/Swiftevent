@@ -14,8 +14,15 @@ struct connpassRowBackgroundView: View {
     }
 }
 
+struct connpassListBackgroundView: View {
+    var body: some View {
+        Color.connpassListColor
+    }
+}
+
 extension Color {
     static let connpassColor = Color("connpassRow")
+    static let connpassListColor = Color("connpassList")
 }
 
 

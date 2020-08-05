@@ -39,7 +39,7 @@ struct MyRowView: View {
         .padding(.vertical, 10)
         .compositingGroup()
         .shadow(radius: 5)
-        .background(Color.white)
+        .background(myListBackgroundView())
     }
 }
 
