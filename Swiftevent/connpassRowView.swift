@@ -47,7 +47,7 @@ struct connpassRowView: View {
         .padding(.vertical, 10)
         .compositingGroup()
         .shadow(radius: 5)
-        .background(Color.white)
+        .background(connpassListBackgroundView())
     }
 }
 

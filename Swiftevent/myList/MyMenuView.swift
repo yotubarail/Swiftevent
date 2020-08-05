@@ -44,6 +44,7 @@ struct MyMenuView: View {
                     Spacer()
                 }
             }
+        .navigationBarTitle("アカウント設定",displayMode: .inline)
         .navigationBarItems(leading: Button("完了") {
             self.presentationMode.wrappedValue.dismiss()
         })

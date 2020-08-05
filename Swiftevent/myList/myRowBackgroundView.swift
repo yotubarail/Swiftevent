@@ -10,14 +10,19 @@ import SwiftUI
 
 struct myRowBackgroundView: View {
     var body: some View {
-        ZStack {
-            Color.costomColor
-        }
+        Color.myRowColor
+    }
+}
+
+struct myListBackgroundView: View {
+    var body: some View {
+        Color.myListColor
     }
 }
 
 extension Color {
-    static let costomColor = Color("myRow")
+    static let myRowColor = Color("myRow")
+    static let myListColor = Color("myList")
 }
 
 struct rowBackgroundView_Previews: PreviewProvider {
