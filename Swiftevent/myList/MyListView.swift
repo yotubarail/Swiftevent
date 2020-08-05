@@ -33,13 +33,13 @@ struct MyListView: View {
                         ActionSheet(title: Text("メニュー"),
                             message: Text("選択してください"),
                             buttons: [
-                                .default(Text("詳細"), action: {
+                                .default(Text("詳細を見る"), action: {
                                     self.showModal = true
                                     self.activeSheet = .first
                                 }),
-                                .default(Text("地図"), action: {
+                                .default(Text("地図を開く"), action: {
                                     self.showModal = true
-                                     self.activeSheet = .second
+                                    self.activeSheet = .second
                                 }),
                                 .cancel()
                             ]
@@ -59,10 +59,6 @@ struct MyListView: View {
             }
         .navigationBarTitle("参加イベント")
             .navigationBarItems(trailing:
-//                   NavigationLink(destination: MyMenuView(), label: {
-//                   Text("設定")
-//                       .font(.system(size: 20))
-//               })
                 Button(action: {
                     self.setting.toggle()
                 }) {

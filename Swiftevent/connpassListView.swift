@@ -13,7 +13,7 @@ struct connpassListView: View {
     @State var showModal = false
     
 //    let events: [Event] = mockEventsData
-     @ObservedObject var fetcher = groupEventFetcher()
+     @ObservedObject var fetcher = GroupEventFetcher()
     
     var body: some View {
         NavigationView {
