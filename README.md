@@ -14,7 +14,7 @@ Swift UI中心に作っていくことを目標にしています。
 
 ・地図画面を開いた後画面の向きを変えると、たまに完了ボタンが効かなくなる（実機のみで確認できるバグ）  
 
-・SFSafariViewはNavigationLinkだとBarが2つ表示されてしまうため、sheetでの画面遷移としている。Modalとして表示されるが、下スワイプなく左からのスワイプで閉じてしまう。  
+・SFSafariViewはNavigationLinkだとBarが2つ表示されてしまうため、sheetでの画面遷移としている。Modalとして表示されるが、下スワイプではなく左からのスワイプで閉じてしまう。  
 
 ・シミュレーター（iPhone)ではおそらく横がRegularの時にListがiPadと同じ動きになる（手元のiPhone Xsではこの挙動は確認できない）  
 
