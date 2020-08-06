@@ -3,6 +3,9 @@
 connpassからSwift関連のイベントのデータを持ってくるアプリです。  
 Swift UI中心に作っていくことを目標にしています。
 
+## 問題点
+・connpassのユーザー名を入れた後、アプリを再起動しないとListに自分が参加したイベントが表示できない  
+・Listだとseparatorが消えないためScrollViewを取り入れてみたところ、Rowにそれぞれのデータを表示することは可能だがページの遷移がうまくいかなかった  
 
 ## 参考リンク
 <a href="https://qiita.com/MilanistaDev/items/64dca8c9d5099a19529e">【SwiftUI】外部APIを叩いて取得した結果をListに表示する</a>  
