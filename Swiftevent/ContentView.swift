@@ -23,7 +23,7 @@ struct ContentView: View {
             
             MyListView().tabItem {
                 VStack {
-                    Image(systemName: "person")
+                    Image(systemName: "person.circle.fill")
                     .font(.system(size: 22.0))
                     Text("参加イベント")
                 }
