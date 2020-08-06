@@ -56,7 +56,7 @@ struct MyMenuView: View {
     
     func inUserDefaults() {
         UserDefaults.standard.set(addUserName, forKey: "userName")
-        fether.fetchEventData()
+        fether.fetchMyEventData()
     }
     
     func removeUserDefaults() {

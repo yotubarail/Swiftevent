@@ -15,10 +15,10 @@ class MyGroupEventFetcher: ObservableObject {
     @Published var eventData: [myEvent] = []
 
     init() {
-        fetchEventData()
+        fetchMyEventData()
     }
 
-    func fetchEventData() {
+    func fetchMyEventData() {
         URLSession.shared.dataTask(with: URL(string: urlLink)!) { data, response, error in
             guard let data = data else {
                 return
