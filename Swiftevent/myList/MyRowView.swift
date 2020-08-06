@@ -21,7 +21,7 @@ struct MyRowView: View {
                 Text(eventData.title)
                     .font(.system(size: 20))
                     .foregroundColor(Color.black)
-                    .padding(.bottom,20)
+                    .padding(.bottom,50)
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
                         .foregroundColor(Color.red)
@@ -34,7 +34,7 @@ struct MyRowView: View {
             Text(myEventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
                 .foregroundColor(Color.black)
         }
-        .padding(.horizontal, 10)
+        .padding(10)
         .background(myRowBackgroundView())
         .padding(.vertical, 10)
         .compositingGroup()
