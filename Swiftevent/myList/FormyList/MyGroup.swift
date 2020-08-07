@@ -15,7 +15,7 @@ struct myGroup: Decodable {
 let mockMyEventsData: [myEvent]
 = [myEvent(id: 1,
          title: "Swiftに触ろう",
-         date: "6/24\n19:00",
+         date: "2014-10-10T13:50:40+09:00",
          place: "東京都杉並区",
          people: 15,
          limit: 100,
@@ -24,7 +24,7 @@ let mockMyEventsData: [myEvent]
          lon: "139.6436591"),
    myEvent(id: 2,
          title: "Swiftおべんつよかい",
-         date: "6/24\n19:00",
+         date: "2015-10-10T13:50:40+09:00",
          place: "静岡県静岡市清水区",
          people: 35,
          limit: 50,
