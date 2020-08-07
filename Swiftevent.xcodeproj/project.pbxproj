@@ -27,8 +27,7 @@
 		5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */; };
 		5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5D24D13D83005C16C7 /* MyWebView.swift */; };
 		5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */; };
-		5D69FA6224D2B62C005C16C7 /* myRowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */; };
-		5D69FA6424D3A856005C16C7 /* connpassRowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6324D3A856005C16C7 /* connpassRowBackgroundView.swift */; };
+		5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */; };
 		5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6724D8E41A005C16C7 /* MyMapView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +54,7 @@
 		5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupEventFetcher.swift; sourceTree = "<group>"; };
 		5D69FA5D24D13D83005C16C7 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuView.swift; sourceTree = "<group>"; };
-		5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myRowBackgroundView.swift; sourceTree = "<group>"; };
-		5D69FA6324D3A856005C16C7 /* connpassRowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassRowBackgroundView.swift; sourceTree = "<group>"; };
+		5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBackgroundView.swift; sourceTree = "<group>"; };
 		5D69FA6724D8E41A005C16C7 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,11 +91,8 @@
 				5D69FA2B24D0F8DB005C16C7 /* AppDelegate.swift */,
 				5D69FA2D24D0F8DB005C16C7 /* SceneDelegate.swift */,
 				5D69FA4F24D116C9005C16C7 /* ContentView.swift */,
-				5D69FA3224D0F8DB005C16C7 /* connpassRowView.swift */,
-				5D69FA4224D0F9DC005C16C7 /* connpassListView.swift */,
-				5D69FA4524D0FA66005C16C7 /* connpassWebView.swift */,
-				5D69FA6324D3A856005C16C7 /* connpassRowBackgroundView.swift */,
-				5D69FA4424D0FA43005C16C7 /* ForconnpassList */,
+				5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */,
+				5D69FA6924DD33DC005C16C7 /* connpassList */,
 				5D69FA5124D11CD5005C16C7 /* myList */,
 				5D69FA3424D0F8E0005C16C7 /* Assets.xcassets */,
 				5D69FA3924D0F8E0005C16C7 /* LaunchScreen.storyboard */,
@@ -134,7 +129,6 @@
 				5D69FA5D24D13D83005C16C7 /* MyWebView.swift */,
 				5D69FA6724D8E41A005C16C7 /* MyMapView.swift */,
 				5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */,
-				5D69FA6124D2B62C005C16C7 /* myRowBackgroundView.swift */,
 				5D69FA5224D11CE1005C16C7 /* FormyList */,
 			);
 			path = myList;
@@ -148,6 +142,17 @@
 				5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */,
 			);
 			path = FormyList;
+			sourceTree = "<group>";
+		};
+		5D69FA6924DD33DC005C16C7 /* connpassList */ = {
+			isa = PBXGroup;
+			children = (
+				5D69FA3224D0F8DB005C16C7 /* connpassRowView.swift */,
+				5D69FA4224D0F9DC005C16C7 /* connpassListView.swift */,
+				5D69FA4524D0FA66005C16C7 /* connpassWebView.swift */,
+				5D69FA4424D0FA43005C16C7 /* ForconnpassList */,
+			);
+			path = connpassList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D69FA2C24D0F8DB005C16C7 /* AppDelegate.swift in Sources */,
-				5D69FA6224D2B62C005C16C7 /* myRowBackgroundView.swift in Sources */,
 				5D69FA2E24D0F8DB005C16C7 /* SceneDelegate.swift in Sources */,
 				5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */,
 				5D69FA5824D13B8E005C16C7 /* MyEvent.swift in Sources */,
@@ -230,7 +234,7 @@
 				5D69FA5624D13A99005C16C7 /* MyRowView.swift in Sources */,
 				5D69FA5A24D13B9C005C16C7 /* MyGroup.swift in Sources */,
 				5D69FA4C24D0FB97005C16C7 /* group.swift in Sources */,
-				5D69FA6424D3A856005C16C7 /* connpassRowBackgroundView.swift in Sources */,
+				5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */,
 				5D69FA4824D0FAB2005C16C7 /* connpassEvent.swift in Sources */,
 				5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */,
 				5D69FA4324D0F9DC005C16C7 /* connpassListView.swift in Sources */,
