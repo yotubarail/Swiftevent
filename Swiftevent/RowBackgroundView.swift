@@ -1,5 +1,5 @@
 //
-//  connpassRowBackgroundView.swift
+//  RowBackgroundView.swift
 //  Swiftevent
 //
 //  Created by 滝浪翔太 on 2020/07/31.
@@ -20,9 +20,23 @@ struct connpassListBackgroundView: View {
     }
 }
 
+struct myRowBackgroundView: View {
+    var body: some View {
+        Color.myRowColor
+    }
+}
+
+struct myListBackgroundView: View {
+    var body: some View {
+        Color.myListColor
+    }
+}
+
 extension Color {
     static let connpassColor = Color("connpassRow")
     static let connpassListColor = Color("connpassList")
+    static let myRowColor = Color("myRow")
+    static let myListColor = Color("myList")
 }
 
 
