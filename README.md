@@ -18,6 +18,8 @@ Swift UI中心に作っていくことを目標にしています。
 
 ・シミュレーター（iPhone)ではおそらく横がRegularの時にListがiPadと同じ動きになる（手元のiPhone Xsではこの挙動は確認できない）  
 
+・地図画面を開いた時に位置情報使用のアラートが出るが、何度も出たり消えたりして設定ができない
+
 
 ## 参考リンク
 <a href="https://qiita.com/MilanistaDev/items/64dca8c9d5099a19529e">【SwiftUI】外部APIを叩いて取得した結果をListに表示する</a>  
