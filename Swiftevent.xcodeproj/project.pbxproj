@@ -29,6 +29,7 @@
 		5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */; };
 		5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */; };
 		5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6724D8E41A005C16C7 /* MyMapView.swift */; };
+		5D69FA6D24E12AA9005C16C7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FA6C24E12AA9005C16C7 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuView.swift; sourceTree = "<group>"; };
 		5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBackgroundView.swift; sourceTree = "<group>"; };
 		5D69FA6724D8E41A005C16C7 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
+		5D69FA6C24E12AA9005C16C7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		5D69FA1F24D0F8DB005C16C7 = {
 			isa = PBXGroup;
 			children = (
+				5D69FA6C24E12AA9005C16C7 /* Settings.bundle */,
 				5D69FA2A24D0F8DB005C16C7 /* Swiftevent */,
 				5D69FA2924D0F8DB005C16C7 /* Products */,
 			);
@@ -213,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D69FA6D24E12AA9005C16C7 /* Settings.bundle in Resources */,
 				5D69FA3B24D0F8E0005C16C7 /* LaunchScreen.storyboard in Resources */,
 				5D69FA3824D0F8E0005C16C7 /* Preview Assets.xcassets in Resources */,
 				5D69FA3524D0F8E0005C16C7 /* Assets.xcassets in Resources */,
