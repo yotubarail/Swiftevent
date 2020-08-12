@@ -90,9 +90,9 @@ struct MyListView: View {
             }
             let decoder: JSONDecoder = JSONDecoder()
             do {
-                let searchedResultData = try decoder.decode(myGroup.self, from: data)
+                let searchedMyData = try decoder.decode(myGroup.self, from: data)
                 DispatchQueue.main.async {
-                    self.fetcher.eventData = searchedResultData.events.reversed()
+                    self.fetcher.eventData = searchedMyData.events.reversed()
                 }
             } catch {
                 print(error.localizedDescription)

@@ -10,7 +10,7 @@ import Foundation
 
 class MyGroupEventFetcher: ObservableObject {
 
-    private var urlLink = "https://connpass.com/api/v1/event/?nickname=\(UserDefaults.standard.string(forKey: "userName") ?? "")&order=2"
+    private var url = "https://connpass.com/api/v1/event/?nickname=\(UserDefaults.standard.string(forKey: "userName") ?? "")&order=2"
     
     @Published var eventData: [myEvent] = []
 
@@ -19,15 +19,15 @@ class MyGroupEventFetcher: ObservableObject {
     }
 
     func fetchMyEventData() {
-        URLSession.shared.dataTask(with: URL(string: urlLink)!) { data, response, error in
+        URLSession.shared.dataTask(with: URL(string: url)!) { data, response, error in
             guard let data = data else {
                 return
             }
             let decoder: JSONDecoder = JSONDecoder()
             do {
-                let searchedResultData = try decoder.decode(myGroup.self, from: data)
+                let searchedMyData = try decoder.decode(myGroup.self, from: data)
                 DispatchQueue.main.async {
-                    self.eventData = searchedResultData.events.reversed()
+                    self.eventData = searchedMyData.events.reversed()
                 }
             } catch {
                 print(error.localizedDescription)
