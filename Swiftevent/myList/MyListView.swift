@@ -58,7 +58,13 @@ struct MyListView: View {
             .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("参加イベント")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading:
+                Button(action: {
+                    self.loadData()
+                }) {
+                    Image(systemName: "goforward")
+                        .font(.system(size: 22))
+                },trailing:
                 Button(action: {
                     self.setting.toggle()
                 }) {
@@ -70,7 +76,6 @@ struct MyListView: View {
                 }
             )
         }
-    .onAppear(perform: loadData)
     }
     
     func loadData() {
