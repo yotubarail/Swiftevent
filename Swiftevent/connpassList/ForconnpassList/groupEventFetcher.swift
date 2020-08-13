@@ -9,8 +9,6 @@
 import Foundation
 
 class GroupEventFetcher: ObservableObject {
-
-    private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=25"
     
     @Published var eventData: [Event] = []
 
@@ -19,7 +17,11 @@ class GroupEventFetcher: ObservableObject {
     }
 
     func fetchEventData() {
-        URLSession.shared.dataTask(with: URL(string: urlLink)!) { data, response, error in
+        guard let url = URL(string: "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=25") else {
+            return
+        }
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
                 return
             }
