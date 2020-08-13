@@ -18,7 +18,7 @@ struct connpassListView: View {
     var body: some View {
         NavigationView {
             List {
-               ForEach(fetcher.eventData)  { event in
+               ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
                     Button(action: {
                             self.showModal.toggle()
                     }) {
