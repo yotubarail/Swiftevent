@@ -30,6 +30,7 @@
 		5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */; };
 		5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6724D8E41A005C16C7 /* MyMapView.swift */; };
 		5D69FA6F24E12E0D005C16C7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FA6E24E12E0D005C16C7 /* Settings.bundle */; };
+		5D69FA7124E50D53005C16C7 /* connpassSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA7024E50D53005C16C7 /* connpassSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBackgroundView.swift; sourceTree = "<group>"; };
 		5D69FA6724D8E41A005C16C7 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		5D69FA6E24E12E0D005C16C7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		5D69FA7024E50D53005C16C7 /* connpassSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				5D69FA3224D0F8DB005C16C7 /* connpassRowView.swift */,
 				5D69FA4224D0F9DC005C16C7 /* connpassListView.swift */,
 				5D69FA4524D0FA66005C16C7 /* connpassWebView.swift */,
+				5D69FA7024E50D53005C16C7 /* connpassSearchView.swift */,
 				5D69FA4424D0FA43005C16C7 /* ForconnpassList */,
 			);
 			path = connpassList;
@@ -247,6 +250,7 @@
 				5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */,
 				5D69FA3124D0F8DB005C16C7 /* Swiftevent.xcdatamodeld in Sources */,
 				5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */,
+				5D69FA7124E50D53005C16C7 /* connpassSearchView.swift in Sources */,
 				5D69FA5424D13A81005C16C7 /* MyListView.swift in Sources */,
 				5D69FA4E24D0FBCA005C16C7 /* groupEventFetcher.swift in Sources */,
 			);
@@ -394,6 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = on.yotubarail.Swiftevent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -415,6 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = on.yotubarail.Swiftevent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

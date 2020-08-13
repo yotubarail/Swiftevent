@@ -11,6 +11,7 @@ import SwiftUI
 struct connpassListView: View {
     
     @State var showModal = false
+    @State var search = false
     
 //    let events: [Event] = mockEventsData
      @ObservedObject var fetcher = GroupEventFetcher()
@@ -37,6 +38,17 @@ struct connpassListView: View {
         }) {
             Image(systemName: "goforward")
                 .font(.system(size: 22))
+                .frame(width: 44)
+        },trailing:
+        Button(action: {
+            self.search.toggle()
+        }) {
+            Text("検索")
+                .font(.system(size: 22))
+        }
+        .sheet(isPresented: self.$search,
+               onDismiss: self.fetcher.fetchEventData) {
+                connpassSearchView()
         })
         }
     }

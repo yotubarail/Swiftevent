@@ -64,6 +64,7 @@ struct MyListView: View {
                 }) {
                     Image(systemName: "goforward")
                         .font(.system(size: 22))
+                        .frame(width: 44)
                 },trailing:
                 Button(action: {
                     self.setting.toggle()
