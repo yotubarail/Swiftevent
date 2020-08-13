@@ -71,7 +71,8 @@ struct MyListView: View {
                     Text("設定")
                         .font(.system(size: 22))
                 }
-                .sheet(isPresented: self.$setting) {
+                .sheet(isPresented: self.$setting,
+                       onDismiss: self.fetcher.fetchMyEventData) {
                         MyMenuView()
                 }
             )
