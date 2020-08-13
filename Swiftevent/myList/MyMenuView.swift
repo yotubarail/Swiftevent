@@ -54,6 +54,7 @@ struct MyMenuView: View {
     
     func inUserDefaults() {
         UserDefaults.standard.set(addUserName, forKey: "userName")
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     func removeUserDefaults() {

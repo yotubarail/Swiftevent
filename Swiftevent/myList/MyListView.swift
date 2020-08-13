@@ -60,7 +60,7 @@ struct MyListView: View {
         .navigationBarTitle("参加イベント")
             .navigationBarItems(leading:
                 Button(action: {
-                    self.loadData()
+                    self.fetcher.fetchMyEventData()
                 }) {
                     Image(systemName: "goforward")
                         .font(.system(size: 22))
@@ -76,28 +76,6 @@ struct MyListView: View {
                 }
             )
         }
-    }
-    
-    func loadData() {
-        guard let url = URL(string: "https://connpass.com/api/v1/event/?nickname=\(UserDefaults.standard.string(forKey: "userName") ?? "")&order=2") else {
-            return
-        }
-        
-        let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                return
-            }
-            let decoder: JSONDecoder = JSONDecoder()
-            do {
-                let searchedMyData = try decoder.decode(myGroup.self, from: data)
-                DispatchQueue.main.async {
-                    self.fetcher.eventData = searchedMyData.events.reversed()
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
     }
 }
 
