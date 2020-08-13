@@ -31,6 +31,13 @@ struct connpassListView: View {
                 .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("connpass検索結果")
+        .navigationBarItems(leading:
+        Button(action: {
+            self.fetcher.fetchEventData()
+        }) {
+            Image(systemName: "goforward")
+                .font(.system(size: 22))
+        })
         }
     }
 }
