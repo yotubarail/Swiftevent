@@ -51,6 +51,9 @@ struct connpassListView: View {
                 connpassSearchView()
         })
         }
+        .onAppear() {
+            UITableView.appearance().separatorStyle = .none
+        }
     }
 }
 
