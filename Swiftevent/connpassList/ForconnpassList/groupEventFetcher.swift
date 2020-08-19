@@ -17,7 +17,9 @@ class GroupEventFetcher: ObservableObject {
     }
 
     func fetchEventData() {
-        guard let url = URL(string: "https://connpass.com/api/v1/event/?keyword=\(UserDefaults.standard.string(forKey: "search") ?? "")&order=2&count=100") else {
+        let urlString: String = "https://connpass.com/api/v1/event/?keyword=\(UserDefaults.standard.string(forKey: "search") ?? "")&order=2&count=100"
+        let encode = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        guard let url = URL(string: encode!) else {
             return
         }
         let request = URLRequest(url: url)
