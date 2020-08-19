@@ -26,8 +26,6 @@ struct connpassSearchView: View {
                         .autocapitalization(.none)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 250)
-                    Text("※半角英数字のみ対応")
-                        .font(.system(size: 15))
                         .padding(.bottom, 50)
                     Button(action: inUserDefaults, label: {
                         Text("検索")
