@@ -27,9 +27,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>位置情報を取得します</string>
+	<string>目的地までのルートを表示させるために、位置情報を取得します</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>位置情報を取得します</string>
+	<string>目的地までのルートを表示させるために、位置情報を取得します</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
