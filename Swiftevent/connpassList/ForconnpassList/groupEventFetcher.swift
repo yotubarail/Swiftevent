@@ -17,7 +17,9 @@ class GroupEventFetcher: ObservableObject {
     }
 
     func fetchEventData() {
-        let urlString: String = "https://connpass.com/api/v1/event/?keyword=\(UserDefaults.standard.string(forKey: "search") ?? "")&order=2&count=100"
+        let arr = UserDefaults.standard.string(forKey: "search")?.split(separator: " ")
+        let toString = arr?.joined(separator: ",")
+        let urlString: String = "https://connpass.com/api/v1/event/?keyword=\(toString ?? "")&order=2&count=100"
         let encode = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         guard let url = URL(string: encode!) else {
             return
