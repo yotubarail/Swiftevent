@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PKHUD
 
 class GroupEventFetcher: ObservableObject {
     
@@ -17,6 +18,7 @@ class GroupEventFetcher: ObservableObject {
     }
 
     func fetchEventData() {
+        HUD.show(.progress)
         let arr = UserDefaults.standard.string(forKey: "search")?.components(separatedBy: CharacterSet(charactersIn: " 　"))
         let toString = arr?.joined(separator: ",")
         let urlString: String = "https://connpass.com/api/v1/event/?keyword=\(toString ?? "")&order=2&count=100"
@@ -34,6 +36,7 @@ class GroupEventFetcher: ObservableObject {
                 let searchedResultData = try decoder.decode(group.self, from: data)
                 DispatchQueue.main.async {
                     self.eventData = searchedResultData.events.reversed()
+                    HUD.hide()
                 }
             } catch {
                 print(error.localizedDescription)
