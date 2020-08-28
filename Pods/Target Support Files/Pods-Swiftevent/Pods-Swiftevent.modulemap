@@ -1,0 +1,6 @@
+framework module Pods_Swiftevent {
+  umbrella header "Pods-Swiftevent-umbrella.h"
+
+  export *
+  module * { export * }
+}
