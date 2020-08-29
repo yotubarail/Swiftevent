@@ -33,6 +33,8 @@ struct MapView: UIViewRepresentable {
     let eventData: myEvent!
     let showingRoute: Bool
     
+    let location = LocationModel()
+    
     private let mapView = WrappableMapView()
 
     func makeUIView(context: UIViewRepresentableContext<MapView>) -> WrappableMapView {
@@ -57,11 +59,8 @@ struct MapView: UIViewRepresentable {
         uiView.showsUserLocation = true
         
         if showingRoute {
-            let locationManager = CLLocationManager()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
+            
+            location.requestAuthorisation()
 
             let request = MKDirections.Request()
             request.source = .forCurrentLocation()
@@ -88,6 +87,31 @@ struct MapView: UIViewRepresentable {
             renderer.lineWidth = 4.0
             return renderer
         }
+    }
+}
+
+class LocationModel: NSObject, ObservableObject {
+    private let locationManager = CLLocationManager()
+    @Published var authorisationStatus: CLAuthorizationStatus = .notDetermined
+
+    override init() {
+        super.init()
+        self.locationManager.delegate = self
+    }
+
+    public func requestAuthorisation(always: Bool = false) {
+        if always {
+            self.locationManager.requestAlwaysAuthorization()
+        } else {
+            self.locationManager.requestWhenInUseAuthorization()
+        }
+    }
+}
+
+extension LocationModel: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        self.authorisationStatus = status
     }
 }
 
