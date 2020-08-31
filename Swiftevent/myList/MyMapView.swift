@@ -56,11 +56,11 @@ struct MapView: UIViewRepresentable {
         annotation.title = eventData.place
         uiView.addAnnotation(annotation)
         
-        uiView.showsUserLocation = true
-        
         if showingRoute {
             
             location.requestAuthorisation()
+            
+            uiView.showsUserLocation = true
 
             let request = MKDirections.Request()
             request.source = .forCurrentLocation()
@@ -90,7 +90,7 @@ struct MapView: UIViewRepresentable {
     }
 }
 
-class LocationModel: NSObject, ObservableObject {
+class LocationModel: NSObject {
     private let locationManager = CLLocationManager()
     @Published var authorisationStatus: CLAuthorizationStatus = .notDetermined
 
