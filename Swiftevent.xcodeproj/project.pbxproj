@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D3AD25E250B0E3500E773A9 /* Extension_PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AD25D250B0E3500E773A9 /* Extension_PKHUD.swift */; };
+		5D3AD267250F03E500E773A9 /* EventDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AD266250F03E500E773A9 /* EventDateFormatter.swift */; };
 		5D69FA2C24D0F8DB005C16C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA2B24D0F8DB005C16C7 /* AppDelegate.swift */; };
 		5D69FA2E24D0F8DB005C16C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA2D24D0F8DB005C16C7 /* SceneDelegate.swift */; };
 		5D69FA3124D0F8DB005C16C7 /* Swiftevent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA2F24D0F8DB005C16C7 /* Swiftevent.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2D34A2470FBA58462D0F6684 /* Pods_Swiftevent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftevent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3AD25D250B0E3500E773A9 /* Extension_PKHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_PKHUD.swift; sourceTree = "<group>"; };
+		5D3AD266250F03E500E773A9 /* EventDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateFormatter.swift; sourceTree = "<group>"; };
 		5D69FA2824D0F8DB005C16C7 /* Swiftevent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftevent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D69FA2B24D0F8DB005C16C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D69FA2D24D0F8DB005C16C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,12 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D3AD25F250B118200E773A9 /* Extensions */ = {
+		5D3AD25F250B118200E773A9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				5D3AD25D250B0E3500E773A9 /* Extension_PKHUD.swift */,
+				5D3AD266250F03E500E773A9 /* EventDateFormatter.swift */,
 			);
-			path = Extensions;
+			path = Other;
 			sourceTree = "<group>";
 		};
 		5D69FA1F24D0F8DB005C16C7 = {
@@ -114,7 +117,7 @@
 				5D69FA2D24D0F8DB005C16C7 /* SceneDelegate.swift */,
 				5D69FA4F24D116C9005C16C7 /* ContentView.swift */,
 				5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */,
-				5D3AD25F250B118200E773A9 /* Extensions */,
+				5D3AD25F250B118200E773A9 /* Other */,
 				5D69FA6924DD33DC005C16C7 /* connpassList */,
 				5D69FA5124D11CD5005C16C7 /* myList */,
 				5D69FA3424D0F8E0005C16C7 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 				5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */,
 				5D69FA5824D13B8E005C16C7 /* MyEvent.swift in Sources */,
 				5D69FA3324D0F8DB005C16C7 /* connpassRowView.swift in Sources */,
+				5D3AD267250F03E500E773A9 /* EventDateFormatter.swift in Sources */,
 				5D69FA5624D13A99005C16C7 /* MyRowView.swift in Sources */,
 				5D69FA5A24D13B9C005C16C7 /* MyGroup.swift in Sources */,
 				5D3AD25E250B0E3500E773A9 /* Extension_PKHUD.swift in Sources */,

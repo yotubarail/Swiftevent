@@ -69,6 +69,8 @@ extension UIApplication {
     }
 }
 
+
+//MARK: - Preview
 struct MyMenuView_Previews: PreviewProvider {
     static var previews: some View {
         MyMenuView()

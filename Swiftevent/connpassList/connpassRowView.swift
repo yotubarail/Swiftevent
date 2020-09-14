@@ -51,23 +51,8 @@ struct connpassRowView: View {
     }
 }
 
-final class EventDateFormatter: DateFormatter {
-    class func StringToDate(dateString: String, isOnlyDate: Bool) -> String {
-        let formatter = ISO8601DateFormatter()
-        let date = formatter.date(from: dateString)
-        return DateToString(date: date!, isOnlyDate: isOnlyDate)
-    }
-    
-    class func DateToString(date: Date, isOnlyDate: Bool) -> String {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        formatter.locale = Locale(identifier: "ja_JP")
-        formatter.setLocalizedDateFormatFromTemplate("MdkHm")
-        return formatter.string(from: date)
-    }
-}
 
-
+//MARK: - Preview
 struct connpassRowView_Previews: PreviewProvider {
     static var previews: some View {
         connpassRowView(eventData: mockEventsData[0])

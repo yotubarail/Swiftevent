@@ -31,7 +31,7 @@ struct MyRowView: View {
                 }
             }
             Spacer()
-            Text(myEventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
+            Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
                 .foregroundColor(Color.black)
         }
         .padding(10)
@@ -43,23 +43,8 @@ struct MyRowView: View {
     }
 }
 
-final class myEventDateFormatter: DateFormatter {
-    class func StringToDate(dateString: String, isOnlyDate: Bool) -> String {
-        let formatter = ISO8601DateFormatter()
-        let date = formatter.date(from: dateString)
-        return DateToString(date: date!, isOnlyDate: isOnlyDate)
-    }
-    
-    class func DateToString(date: Date, isOnlyDate: Bool) -> String {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .short
-        formatter.locale = Locale(identifier: "ja_JP")
-        formatter.setLocalizedDateFormatFromTemplate("MdkHm")
-        return formatter.string(from: date)
-    }
-}
 
-
+//MARK: - Preview
 struct MyRowView_Previews: PreviewProvider {
     static var previews: some View {
         MyRowView(eventData: mockMyEventsData[0])
