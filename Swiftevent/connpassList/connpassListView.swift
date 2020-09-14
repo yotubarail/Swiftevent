@@ -57,6 +57,8 @@ struct connpassListView: View {
     }
 }
 
+
+//MARK: - Preview
 struct connpassListView_Previews: PreviewProvider {
     static var previews: some View {
         connpassListView()

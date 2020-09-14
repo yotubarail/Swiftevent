@@ -32,6 +32,8 @@ struct SafariView: UIViewControllerRepresentable {
     }
 }
 
+
+//MARK: - Preview
 struct connpassWebView_Previews: PreviewProvider {
     static var previews: some View {
         connpassWebView(eventData: mockEventsData[0])

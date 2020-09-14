@@ -56,6 +56,7 @@ struct MapView: UIViewRepresentable {
         annotation.title = eventData.place
         uiView.addAnnotation(annotation)
         
+        // ルート表示
         if showingRoute {
             
             location.requestAuthorisation()
@@ -90,6 +91,8 @@ struct MapView: UIViewRepresentable {
     }
 }
 
+
+//MARK: - Location Manager
 class LocationModel: NSObject {
     private let locationManager = CLLocationManager()
     @Published var authorisationStatus: CLAuthorizationStatus = .notDetermined
@@ -116,6 +119,7 @@ extension LocationModel: CLLocationManagerDelegate {
 }
 
 
+//MARK: - Preview
 struct MyMapView_Previews: PreviewProvider {
     static var previews: some View {
         MyMapView(eventData: mockMyEventsData[0])

@@ -39,7 +39,7 @@ extension Color {
     static let myListColor = Color("myList")
 }
 
-
+//MARK: - Preview
 struct connpassRowBackgroundView_Previews: PreviewProvider {
     static var previews: some View {
         connpassRowBackgroundView()
