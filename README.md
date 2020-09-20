@@ -36,6 +36,8 @@ SwiftUI中心に作っていくことを目標にしています。
 
 <a href="https://www.it-swarm.dev/ja/swift/複数のシート（ispresented-がswiftuiで機能しない/813529631/">複数のシート（isPresented :)がSwiftUIで機能しない</a>  
 
+<a href="https://qiita.com/i_nak/items/be0fac91bdc68aa165db">【Swift】WebViewのCookieを永続的に保持しておきたい</a>  
+
 <a href="https://qiita.com/chino_tweet/items/73e6df230ab77a2f5887">【SwiftUI】MapKitを導入して地図を表示する</a>  
 
 <a href="https://developer.apple.com/jp/xcode/swiftui/">Apple公式</a>  
