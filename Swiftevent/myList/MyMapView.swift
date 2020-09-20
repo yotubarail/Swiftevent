@@ -15,17 +15,9 @@ struct MyMapView: View {
     var eventData: myEvent
     
     var body: some View {
-        NavigationView {
-            MapView(eventData: eventData, showingRoute: true)
+        MapView(eventData: eventData, showingRoute: true)
             .edgesIgnoringSafeArea(.all)
-            
-        .navigationBarTitle("地図", displayMode: .inline)
-        .navigationBarItems(leading: Button("完了") {
-            self.presentationMode.wrappedValue.dismiss()
-        }
-        .font(.system(size: 22))
-        )
-        }
+            .navigationBarTitle("地図", displayMode: .inline)
     }
 }
 
