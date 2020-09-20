@@ -14,8 +14,6 @@ enum ActiveSheet {
 
 struct MyListView: View {
     @State var showModal = false
-    @State var showActionSheet = false
-    @State private var activeSheet: ActiveSheet = .first
     @State var setting = false
         
     @ObservedObject var fetcher = MyGroupEventFetcher()
@@ -30,6 +28,7 @@ struct MyListView: View {
                      }
                      NavigationLink(destination: MyMapView(eventData: event)) {
                          Text("地図を開く")
+                            .font(.system(size: 22))
                      }
                  }
                 }

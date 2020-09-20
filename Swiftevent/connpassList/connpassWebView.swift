@@ -8,27 +8,39 @@
 
 import SwiftUI
 import SafariServices
+import WebKit
 
 struct connpassWebView: View {
     
     var eventData: Event
     
     var body: some View {
-        SafariView(url: URL(string: eventData.url)!)
-            .edgesIgnoringSafeArea(.bottom)
+        UIWebView(url: eventData.url)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct SafariView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = SFSafariViewController
+//struct SafariView: UIViewControllerRepresentable {
+//    typealias UIViewControllerType = SFSafariViewController
+//
+//    var url: URL
+//
+//    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
+//        return SFSafariViewController(url: url)
+//    }
+//
+//    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+//    }
+//}
+struct UIWebView: UIViewRepresentable {
+    var url:String
 
-    var url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
     }
 
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(URLRequest(url: URL(string: url)!))
     }
 }
 

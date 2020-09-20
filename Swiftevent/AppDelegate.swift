@@ -12,12 +12,53 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // UserDefaultにクッキーを保存する
+        private func storeCookies() {
+            // 保持されているクッキーを取り出す
+            guard let cookies = HTTPCookieStorage.shared.cookies else { return }
+            // クッキーを[String : AnyObject]型に変換
+            var cookieDictionary = [String : AnyObject]()
+            for cookie in cookies {
+                cookieDictionary[cookie.name] = cookie.properties as AnyObject?
+            }
+            // UserDefaultsに保存
+            UserDefaults.standard.set(cookieDictionary, forKey: "cookie")
+        }
 
+        // UserDefaultからクッキーを取得する
+        private func retrieveCookies() {
+            // UserDefaultsに保存してあるクッキーをいったん[String : AnyObject]型で取り出す
+            guard let cookieDictionary = UserDefaults.standard.dictionary(forKey: "cookie") else { return }
+            // HTTPCookie型に変換
+            for (_, cookieProperties) in cookieDictionary {
+                if let cookieProperties = cookieProperties as? [HTTPCookiePropertyKey : Any] {
+                    if let cookie = HTTPCookie(properties: cookieProperties ) {
+                        // クッキーをメモリ内にセットします
+                        HTTPCookieStorage.shared.setCookie(cookie)
+                    }
+                }
+            }
+        }
 
+    // アプリが立ち上がった時
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(1)
+        // クッキーを呼び出す
+        retrieveCookies()
         return true
+    }
+    
+    // バックグラウンドに入った時
+    func applicationDidEnterBackground(_ application: UIApplication) {
+         // クッキー保存
+         storeCookies()
+    }
+
+    // アプリが閉じられた時
+    func applicationWillTerminate(_ application: UIApplication) {
+        // クッキー保存
+         storeCookies()
     }
 
     // MARK: UISceneSession Lifecycle

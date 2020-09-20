@@ -8,29 +8,41 @@
 
 import SwiftUI
 import SafariServices
+import WebKit
 
 struct MyWebView: View {
     var eventData: myEvent
     
     var body: some View {
-        SafariView(url: URL(string: eventData.url)!)
+        UIMyWebView(url: eventData.url)
             .edgesIgnoringSafeArea(.bottom)
     }
 }
 
-struct MySafariView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = SFSafariViewController
+//struct MySafariView: UIViewControllerRepresentable {
+//    typealias UIViewControllerType = SFSafariViewController
+//
+//    var url: URL
+//
+//    func makeUIViewController(context: UIViewControllerRepresentableContext<MySafariView>) -> SFSafariViewController {
+//        return SFSafariViewController(url: url)
+//    }
+//
+//    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<MySafariView>) {
+//    }
+//}
 
-    var url: URL
+struct UIMyWebView: UIViewRepresentable {
+    var url:String
 
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MySafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
     }
 
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<MySafariView>) {
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(URLRequest(url: URL(string: url)!))
     }
 }
-
 
 //MARK: - Preview
 struct MyWebView_Previews: PreviewProvider {
