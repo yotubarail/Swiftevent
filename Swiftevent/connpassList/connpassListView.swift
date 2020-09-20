@@ -18,12 +18,13 @@ struct connpassListView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            List {
                 ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
                     NavigationLink(destination: connpassWebView(eventData: event)) {
                         connpassRowView(eventData: event)
                     }
                 }
+                .listRowInsets(EdgeInsets())
             }
         .navigationBarTitle("connpass検索結果")
         .navigationBarItems(leading:
