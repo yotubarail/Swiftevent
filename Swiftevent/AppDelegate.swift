@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for (_, cookieProperties) in cookieDictionary {
                 if let cookieProperties = cookieProperties as? [HTTPCookiePropertyKey : Any] {
                     if let cookie = HTTPCookie(properties: cookieProperties ) {
-                        // クッキーをメモリ内にセットします
+                        // クッキーをメモリ内にセット
                         HTTPCookieStorage.shared.setCookie(cookie)
                     }
                 }

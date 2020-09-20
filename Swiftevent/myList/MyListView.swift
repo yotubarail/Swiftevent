@@ -30,6 +30,7 @@ struct MyListView: View {
                          Text("地図を開く")
                             .font(.system(size: 22))
                      }
+                    Spacer()
                  }
                 }
             }

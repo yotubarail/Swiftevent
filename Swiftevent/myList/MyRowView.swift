@@ -34,6 +34,7 @@ struct MyRowView: View {
             Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
                 .foregroundColor(Color.black)
         }
+        .frame(height: 170)
         .padding(10)
         .background(myRowBackgroundView())
         .padding(.vertical, 10)
