@@ -18,20 +18,6 @@ struct MyWebView: View {
     }
 }
 
-struct MySafariView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = SFSafariViewController
-
-    var url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MySafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<MySafariView>) {
-    }
-}
-
-
 //MARK: - Preview
 struct MyWebView_Previews: PreviewProvider {
     static var previews: some View {

@@ -33,6 +33,7 @@
 		5D69FA6824D8E41B005C16C7 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA6724D8E41A005C16C7 /* MyMapView.swift */; };
 		5D69FA6F24E12E0D005C16C7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FA6E24E12E0D005C16C7 /* Settings.bundle */; };
 		5D69FA7124E50D53005C16C7 /* connpassSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA7024E50D53005C16C7 /* connpassSearchView.swift */; };
+		5DE636012518874800DE4AB9 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE636002518874800DE4AB9 /* SafariView.swift */; };
 		7219F02778A2546B78DC4B57 /* Pods_Swiftevent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D34A2470FBA58462D0F6684 /* Pods_Swiftevent.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		5D69FA6724D8E41A005C16C7 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		5D69FA6E24E12E0D005C16C7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		5D69FA7024E50D53005C16C7 /* connpassSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassSearchView.swift; sourceTree = "<group>"; };
+		5DE636002518874800DE4AB9 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		6D4D72A00F3F972FC0477ED0 /* Pods-Swiftevent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftevent.debug.xcconfig"; path = "Target Support Files/Pods-Swiftevent/Pods-Swiftevent.debug.xcconfig"; sourceTree = "<group>"; };
 		E91BCAC7ED035116A9B10064 /* Pods-Swiftevent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftevent.release.xcconfig"; path = "Target Support Files/Pods-Swiftevent/Pods-Swiftevent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			children = (
 				5D3AD25D250B0E3500E773A9 /* Extension_PKHUD.swift */,
 				5D3AD266250F03E500E773A9 /* EventDateFormatter.swift */,
+				5DE636002518874800DE4AB9 /* SafariView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */,
 				5D69FA4824D0FAB2005C16C7 /* connpassEvent.swift in Sources */,
 				5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */,
+				5DE636012518874800DE4AB9 /* SafariView.swift in Sources */,
 				5D69FA4324D0F9DC005C16C7 /* connpassListView.swift in Sources */,
 				5D69FA5024D116C9005C16C7 /* ContentView.swift in Sources */,
 				5D69FA4624D0FA66005C16C7 /* connpassWebView.swift in Sources */,

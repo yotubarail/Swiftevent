@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import SafariServices
 
 struct connpassWebView: View {
     
@@ -18,20 +17,6 @@ struct connpassWebView: View {
             .edgesIgnoringSafeArea(.bottom)
     }
 }
-
-struct SafariView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = SFSafariViewController
-
-    var url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
-    }
-}
-
 
 //MARK: - Preview
 struct connpassWebView_Previews: PreviewProvider {
