@@ -36,11 +36,11 @@ struct MyRowView: View {
         }
         .frame(height: 170)
         .padding(10)
-        .background(myRowBackgroundView())
+        .background(MyRowBackgroundView())
         .padding(.vertical, 10)
         .compositingGroup()
         .shadow(radius: 5)
-        .background(myListBackgroundView())
+        .background(MyListBackgroundView())
     }
 }
 
