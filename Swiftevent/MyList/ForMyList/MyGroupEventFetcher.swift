@@ -10,7 +10,7 @@ import Foundation
 
 class MyGroupEventFetcher: ObservableObject {
     
-    @Published var eventData: [myEvent] = []
+    @Published var eventData: [Event] = []
     let hudExtension = HudExtension()
 
     init() {
@@ -29,7 +29,7 @@ class MyGroupEventFetcher: ObservableObject {
             }
             let decoder: JSONDecoder = JSONDecoder()
             do {
-                let searchedMyData = try decoder.decode(myGroup.self, from: data)
+                let searchedMyData = try decoder.decode(group.self, from: data)
                 DispatchQueue.main.async {
                     self.eventData = searchedMyData.events.reversed()
                     self.hudExtension.hideProgress()
