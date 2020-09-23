@@ -12,7 +12,7 @@ import Foundation
 
 struct MyRowView: View {
     
-    var eventData: myEvent
+    var eventData: Event
 
     var body: some View {
         
@@ -48,6 +48,6 @@ struct MyRowView: View {
 //MARK: - Preview
 struct MyRowView_Previews: PreviewProvider {
     static var previews: some View {
-        MyRowView(eventData: mockMyEventsData[0])
+        MyRowView(eventData: mockEventsData[0])
     }
 }

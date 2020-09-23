@@ -18,14 +18,12 @@
 		5D69FA3B24D0F8E0005C16C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FA3924D0F8E0005C16C7 /* LaunchScreen.storyboard */; };
 		5D69FA4324D0F9DC005C16C7 /* connpassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4224D0F9DC005C16C7 /* connpassListView.swift */; };
 		5D69FA4624D0FA66005C16C7 /* connpassWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4524D0FA66005C16C7 /* connpassWebView.swift */; };
-		5D69FA4824D0FAB2005C16C7 /* connpassEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4724D0FAB2005C16C7 /* connpassEvent.swift */; };
+		5D69FA4824D0FAB2005C16C7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4724D0FAB2005C16C7 /* Event.swift */; };
 		5D69FA4C24D0FB97005C16C7 /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4B24D0FB97005C16C7 /* group.swift */; };
 		5D69FA4E24D0FBCA005C16C7 /* groupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4D24D0FBCA005C16C7 /* groupEventFetcher.swift */; };
 		5D69FA5024D116C9005C16C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA4F24D116C9005C16C7 /* ContentView.swift */; };
 		5D69FA5424D13A81005C16C7 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5324D13A81005C16C7 /* MyListView.swift */; };
 		5D69FA5624D13A99005C16C7 /* MyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5524D13A99005C16C7 /* MyRowView.swift */; };
-		5D69FA5824D13B8E005C16C7 /* MyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5724D13B8E005C16C7 /* MyEvent.swift */; };
-		5D69FA5A24D13B9C005C16C7 /* MyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5924D13B9C005C16C7 /* MyGroup.swift */; };
 		5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */; };
 		5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5D24D13D83005C16C7 /* MyWebView.swift */; };
 		5D69FA6024D160A9005C16C7 /* MyMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */; };
@@ -52,14 +50,12 @@
 		5D69FA3C24D0F8E0005C16C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D69FA4224D0F9DC005C16C7 /* connpassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassListView.swift; sourceTree = "<group>"; };
 		5D69FA4524D0FA66005C16C7 /* connpassWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassWebView.swift; sourceTree = "<group>"; };
-		5D69FA4724D0FAB2005C16C7 /* connpassEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassEvent.swift; sourceTree = "<group>"; };
+		5D69FA4724D0FAB2005C16C7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5D69FA4B24D0FB97005C16C7 /* group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
 		5D69FA4D24D0FBCA005C16C7 /* groupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupEventFetcher.swift; sourceTree = "<group>"; };
 		5D69FA4F24D116C9005C16C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D69FA5324D13A81005C16C7 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		5D69FA5524D13A99005C16C7 /* MyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRowView.swift; sourceTree = "<group>"; };
-		5D69FA5724D13B8E005C16C7 /* MyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEvent.swift; sourceTree = "<group>"; };
-		5D69FA5924D13B9C005C16C7 /* MyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroup.swift; sourceTree = "<group>"; };
 		5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupEventFetcher.swift; sourceTree = "<group>"; };
 		5D69FA5D24D13D83005C16C7 /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuView.swift; sourceTree = "<group>"; };
@@ -121,8 +117,9 @@
 				5D69FA4F24D116C9005C16C7 /* ContentView.swift */,
 				5D69FA6324D3A856005C16C7 /* RowBackgroundView.swift */,
 				5D3AD25F250B118200E773A9 /* Other */,
+				5DE6360B251AE7D100DE4AB9 /* Group_Event */,
 				5D69FA6924DD33DC005C16C7 /* connpassList */,
-				5D69FA5124D11CD5005C16C7 /* myList */,
+				5D69FA5124D11CD5005C16C7 /* MyList */,
 				5D69FA3424D0F8E0005C16C7 /* Assets.xcassets */,
 				5D69FA3924D0F8E0005C16C7 /* LaunchScreen.storyboard */,
 				5D69FA3C24D0F8E0005C16C7 /* Info.plist */,
@@ -143,14 +140,12 @@
 		5D69FA4424D0FA43005C16C7 /* ForconnpassList */ = {
 			isa = PBXGroup;
 			children = (
-				5D69FA4724D0FAB2005C16C7 /* connpassEvent.swift */,
-				5D69FA4B24D0FB97005C16C7 /* group.swift */,
 				5D69FA4D24D0FBCA005C16C7 /* groupEventFetcher.swift */,
 			);
 			path = ForconnpassList;
 			sourceTree = "<group>";
 		};
-		5D69FA5124D11CD5005C16C7 /* myList */ = {
+		5D69FA5124D11CD5005C16C7 /* MyList */ = {
 			isa = PBXGroup;
 			children = (
 				5D69FA5524D13A99005C16C7 /* MyRowView.swift */,
@@ -158,19 +153,17 @@
 				5D69FA5D24D13D83005C16C7 /* MyWebView.swift */,
 				5D69FA6724D8E41A005C16C7 /* MyMapView.swift */,
 				5D69FA5F24D160A9005C16C7 /* MyMenuView.swift */,
-				5D69FA5224D11CE1005C16C7 /* FormyList */,
+				5D69FA5224D11CE1005C16C7 /* ForMyList */,
 			);
-			path = myList;
+			path = MyList;
 			sourceTree = "<group>";
 		};
-		5D69FA5224D11CE1005C16C7 /* FormyList */ = {
+		5D69FA5224D11CE1005C16C7 /* ForMyList */ = {
 			isa = PBXGroup;
 			children = (
-				5D69FA5724D13B8E005C16C7 /* MyEvent.swift */,
-				5D69FA5924D13B9C005C16C7 /* MyGroup.swift */,
 				5D69FA5B24D13BB6005C16C7 /* MyGroupEventFetcher.swift */,
 			);
-			path = FormyList;
+			path = ForMyList;
 			sourceTree = "<group>";
 		};
 		5D69FA6924DD33DC005C16C7 /* connpassList */ = {
@@ -183,6 +176,15 @@
 				5D69FA4424D0FA43005C16C7 /* ForconnpassList */,
 			);
 			path = connpassList;
+			sourceTree = "<group>";
+		};
+		5DE6360B251AE7D100DE4AB9 /* Group_Event */ = {
+			isa = PBXGroup;
+			children = (
+				5D69FA4724D0FAB2005C16C7 /* Event.swift */,
+				5D69FA4B24D0FB97005C16C7 /* group.swift */,
+			);
+			path = Group_Event;
 			sourceTree = "<group>";
 		};
 		6A28F36FAC15A3F678A6D986 /* Frameworks */ = {
@@ -321,16 +323,14 @@
 				5D69FA2C24D0F8DB005C16C7 /* AppDelegate.swift in Sources */,
 				5D69FA2E24D0F8DB005C16C7 /* SceneDelegate.swift in Sources */,
 				5D69FA5C24D13BB6005C16C7 /* MyGroupEventFetcher.swift in Sources */,
-				5D69FA5824D13B8E005C16C7 /* MyEvent.swift in Sources */,
 				5D69FA3324D0F8DB005C16C7 /* connpassRowView.swift in Sources */,
 				5D3AD267250F03E500E773A9 /* EventDateFormatter.swift in Sources */,
 				5D69FA5624D13A99005C16C7 /* MyRowView.swift in Sources */,
-				5D69FA5A24D13B9C005C16C7 /* MyGroup.swift in Sources */,
 				5D3AD25E250B0E3500E773A9 /* Extension_PKHUD.swift in Sources */,
 				5DE636052518896B00DE4AB9 /* UIWebView.swift in Sources */,
 				5D69FA4C24D0FB97005C16C7 /* group.swift in Sources */,
 				5D69FA6424D3A856005C16C7 /* RowBackgroundView.swift in Sources */,
-				5D69FA4824D0FAB2005C16C7 /* connpassEvent.swift in Sources */,
+				5D69FA4824D0FAB2005C16C7 /* Event.swift in Sources */,
 				5D69FA5E24D13D83005C16C7 /* MyWebView.swift in Sources */,
 				5D69FA4324D0F9DC005C16C7 /* connpassListView.swift in Sources */,
 				5D69FA5024D116C9005C16C7 /* ContentView.swift in Sources */,

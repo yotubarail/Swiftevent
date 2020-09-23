@@ -12,7 +12,7 @@ import MapKit
 struct MyMapView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    var eventData: myEvent
+    var eventData: Event
     
     var body: some View {
         MapView(eventData: eventData, showingRoute: true)
@@ -22,7 +22,7 @@ struct MyMapView: View {
 }
 
 struct MapView: UIViewRepresentable {
-    let eventData: myEvent!
+    let eventData: Event!
     let showingRoute: Bool
     
     let location = LocationModel()
@@ -114,6 +114,6 @@ extension LocationModel: CLLocationManagerDelegate {
 //MARK: - Preview
 struct MyMapView_Previews: PreviewProvider {
     static var previews: some View {
-        MyMapView(eventData: mockMyEventsData[0])
+        MyMapView(eventData: mockEventsData[0])
     }
 }
