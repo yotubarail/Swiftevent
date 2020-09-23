@@ -57,6 +57,7 @@ struct MyListView: View {
                }
             .listRowInsets(EdgeInsets())
             }
+        .listStyle(PlainListStyle())
         .navigationBarTitle("参加イベント")
             .navigationBarItems(leading:
                 Button(action: {

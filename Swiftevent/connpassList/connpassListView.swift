@@ -31,6 +31,7 @@ struct connpassListView: View {
                     }
                 .listRowInsets(EdgeInsets())
             }
+        .listStyle(PlainListStyle())
         .navigationBarTitle("connpass検索結果")
         .navigationBarItems(leading:
         Button(action: {
