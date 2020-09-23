@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct MyWebView: View {
-    var eventData: myEvent
+    var eventData: Event
     
     var body: some View {
         UIWebView(url: eventData.url)
@@ -20,6 +21,6 @@ struct MyWebView: View {
 //MARK: - Preview
 struct MyWebView_Previews: PreviewProvider {
     static var previews: some View {
-        MyWebView(eventData: mockMyEventsData[0])
+        connpassWebView(eventData: mockEventsData[0])
     }
 }
