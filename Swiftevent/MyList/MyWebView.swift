@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import SafariServices
 
 struct MyWebView: View {
     var eventData: Event
