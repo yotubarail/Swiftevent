@@ -12,7 +12,7 @@ struct MyWebView: View {
     var eventData: Event
     
     var body: some View {
-        SafariView(url: URL(string: eventData.url)!)
+        UIWebView(url: eventData.url)
             .edgesIgnoringSafeArea(.bottom)
     }
 }
