@@ -12,25 +12,17 @@ import MapKit
 struct MyMapView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    var eventData: myEvent
+    var eventData: Event
     
     var body: some View {
-        NavigationView {
-            MapView(eventData: eventData, showingRoute: true)
+        MapView(eventData: eventData, showingRoute: true)
             .edgesIgnoringSafeArea(.all)
-            
-        .navigationBarTitle("地図", displayMode: .inline)
-        .navigationBarItems(leading: Button("完了") {
-            self.presentationMode.wrappedValue.dismiss()
-        }
-        .font(.system(size: 22))
-        )
-        }
+            .navigationBarTitle("地図", displayMode: .inline)
     }
 }
 
 struct MapView: UIViewRepresentable {
-    let eventData: myEvent!
+    let eventData: Event!
     let showingRoute: Bool
     
     let location = LocationModel()
@@ -122,6 +114,6 @@ extension LocationModel: CLLocationManagerDelegate {
 //MARK: - Preview
 struct MyMapView_Previews: PreviewProvider {
     static var previews: some View {
-        MyMapView(eventData: mockMyEventsData[0])
+        MyMapView(eventData: mockEventsData[0])
     }
 }

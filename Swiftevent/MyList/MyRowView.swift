@@ -12,7 +12,7 @@ import Foundation
 
 struct MyRowView: View {
     
-    var eventData: myEvent
+    var eventData: Event
 
     var body: some View {
         
@@ -34,12 +34,13 @@ struct MyRowView: View {
             Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
                 .foregroundColor(Color.black)
         }
+        .frame(height: 170)
         .padding(10)
-        .background(myRowBackgroundView())
+        .background(MyRowBackgroundView())
         .padding(.vertical, 10)
         .compositingGroup()
         .shadow(radius: 5)
-        .background(myListBackgroundView())
+        .background(MyListBackgroundView())
     }
 }
 
@@ -47,6 +48,6 @@ struct MyRowView: View {
 //MARK: - Preview
 struct MyRowView_Previews: PreviewProvider {
     static var previews: some View {
-        MyRowView(eventData: mockMyEventsData[0])
+        MyRowView(eventData: mockEventsData[0])
     }
 }

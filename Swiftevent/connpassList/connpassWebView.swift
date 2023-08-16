@@ -13,8 +13,8 @@ struct connpassWebView: View {
     var eventData: Event
     
     var body: some View {
-        SafariView(url: URL(string: eventData.url)!)
-            .edgesIgnoringSafeArea(.bottom)
+        UIWebView(url: eventData.url)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 

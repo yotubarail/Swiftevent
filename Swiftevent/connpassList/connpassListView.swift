@@ -19,16 +19,14 @@ struct connpassListView: View {
     var body: some View {
         NavigationView {
             List {
-               ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
-                    Button(action: {
-                            self.showModal.toggle()
-                    }) {
-                            connpassRowView(eventData: event)
+                ForEach(fetcher.eventData.sorted { $0.date > $1.date})  { event in
+                    ZStack {
+                        NavigationLink(destination: connpassWebView(eventData: event)) {
+                            
                         }
-                        .sheet(isPresented: self.$showModal) {
-                                connpassWebView(eventData: event)
-                        }
+                        connpassRowView(eventData: event)
                     }
+                }
                 .listRowInsets(EdgeInsets())
             }
         .listStyle(PlainListStyle())

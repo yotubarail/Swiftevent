@@ -20,13 +20,13 @@ struct connpassListBackgroundView: View {
     }
 }
 
-struct myRowBackgroundView: View {
+struct MyRowBackgroundView: View {
     var body: some View {
         Color.myRowColor
     }
 }
 
-struct myListBackgroundView: View {
+struct MyListBackgroundView: View {
     var body: some View {
         Color.myListColor
     }
