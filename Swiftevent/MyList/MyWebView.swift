@@ -13,7 +13,7 @@ struct MyWebView: View {
     
     var body: some View {
         UIWebView(url: eventData.url)
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
     }
 }
 
